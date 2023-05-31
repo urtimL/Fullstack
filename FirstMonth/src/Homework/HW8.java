@@ -63,8 +63,7 @@ public class HW8 {
         int k = 0;
 
         for (int i = arrLength - 1; i >= 0; i--) {
-            arrRes[k] = arr[i];
-            k++;
+            arrRes[k++] = arr[i];
         }
         return arrRes;
     }
