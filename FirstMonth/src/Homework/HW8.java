@@ -1,5 +1,6 @@
 package Homework;
 
+import java.sql.Array;
 import java.util.Scanner;
 
 public class HW8 {
@@ -25,13 +26,20 @@ public class HW8 {
 
             switch (num){
                 case 1:
-                    task1();
+                    System.out.println("Первоначальный массив: ");
+                    printArr(arr);
+                    System.out.println("Результат работы метода: ");
+                    printArr(task1(arr)); ;
                     break;
                 case 2:
-                    task2();
+                    System.out.println("Массив: ");
+                    printArr(arr);
+                    System.out.println("Сумма элементов массива равна: " + task2(arr));
                     break;
                 case 3:
-                    task3();
+                    System.out.println("Массив: ");
+                    printArr(arr);
+                    System.out.println("Произведение элементов массива с четными индексами: " + task3(arr));
                     break;
                 case 4:
                     break;
@@ -39,51 +47,50 @@ public class HW8 {
         }
     }
 
-    private static void printArr(){
-        System.out.println("Первоначальный массив: ");
-        for (int i = 0; i < arrLength; i++) {
+    private static void printArr(int[] arr){
+        for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
     }
 
-    private static void task1(){
-        System.out.println("Задача 1. Написать метод, принимающий массив целых чисел, и печатающий\n" +
-                "его в обратном порядке. Сначала последний элемент, потом предпоследний, и т. д.");
-        printArr();
+    private static int[] task1(int[] arr){
+//        System.out.println("Задача 1. Написать метод, принимающий массив целых чисел, и печатающий\n" +
+//                "его в обратном порядке. Сначала последний элемент, потом предпоследний, и т. д.");
 
-        System.out.println("Результат работы метода: ");
+
+        int[] arrRes = new int[arr.length];
+        int k = 0;
+
         for (int i = arrLength - 1; i >= 0; i--) {
-            System.out.print(arr[i] + " ");
+            arrRes[k] = arr[i];
+            k++;
         }
-        System.out.println();
+        return arrRes;
     }
 
-    private static void task2(){
-        System.out.println("Задача 2. Написать метод, принимающий массив целых чисел,\n" +
-                "и возвращающий сумму всех его нечетных элементов");
-        printArr();
+    private static int task2(int[] arr){
+//        System.out.println("Задача 2. Написать метод, принимающий массив целых чисел,\n" +
+//                "и возвращающий сумму всех его нечетных элементов");
+
         int sum = 0;
-        for (int i = 0; i < arrLength; i++) {
+        for (int i = 0; i < arr.length; i++) {
             sum += arr[i];
         }
-        System.out.println("Сумма элементов массива равна: " + sum);
+        return sum;
     }
 
-    private static void task3(){
-        System.out.println("Задача 3. Написать метод, принимающий массив целых чисел,\n" +
-                "и возвращающий произведение всех его элементов, с четными индексами.");
+    private static int task3(int[] arr){
+//        System.out.println("Задача 3. Написать метод, принимающий массив целых чисел,\n" +
+//                "и возвращающий произведение всех его элементов, с четными индексами.");
 
         int res = 1;
 
-        printArr();
-
-        for (int i = 0; i < arrLength; i += 2) {
+        for (int i = 0; i < arr.length; i += 2) {
             res *= arr[i];
         }
 
-        System.out.println("Произведение элементов массива с четными индексами: " + res);
-
+        return res;
     }
 
     private static int userDataInt() {
