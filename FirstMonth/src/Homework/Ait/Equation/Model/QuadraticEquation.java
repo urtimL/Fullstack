@@ -36,7 +36,7 @@ public class QuadraticEquation {
     }
 
     public void display() {
-        System.out.printf("%fx^2 + %fx + %f = 0", this.a, this.b, this.c);
+        System.out.printf("%f * x^2 + %f * x + %f = 0", this.a, this.b, this.c);
     }
     public double delta() {
         return this.b * this.b - 4 * this.a * this.c;
