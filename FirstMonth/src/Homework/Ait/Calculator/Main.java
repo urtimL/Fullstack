@@ -1,4 +1,4 @@
-package Homework.Ait;
+package Homework.Ait.Calculator;
 
 import Homework.Ait.Calculator.CalculatorAppl;
 
