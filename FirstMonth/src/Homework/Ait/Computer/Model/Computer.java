@@ -7,6 +7,7 @@ public class Computer {
     private String brand;
 
     public Computer() {
+        super();
     }
 
     public Computer(String cpu, int ram, int ssd, String brand) {
