@@ -1,7 +1,5 @@
 package Homework.Ait.Calculator;
 
-import Homework.Ait.Calculator.CalculatorAppl;
-
 import java.util.Scanner;
 
 public class Main {
