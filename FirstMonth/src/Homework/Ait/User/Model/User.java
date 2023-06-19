@@ -94,9 +94,7 @@ public class User {
             if(c == '!' || c == '%' || c == '@' || c == '*' || c == '&') { oneSpecialSymbol = true; }
         }
 
-        if(oneSymbolOfUppercase && oneSymbolOfLowercase && oneDigit && oneSpecialSymbol) { return true; }
-
-        return false;
+        return (oneSymbolOfUppercase && oneSymbolOfLowercase && oneDigit && oneSpecialSymbol);
     }
 
     @Override
