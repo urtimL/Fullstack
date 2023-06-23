@@ -32,8 +32,8 @@ public class Main {
                 System.out.println("long min value: " + Long.MIN_VALUE);
                 if (str.equals("long")) { break; }
             case "char" :
-                System.out.println("char max value: " + Character.MAX_VALUE);
-                System.out.println("char min value: " + Character.MIN_VALUE);
+                System.out.println("char max value: " + (int) Character.MAX_VALUE);
+                System.out.println("char min value: " + (int) Character.MIN_VALUE);
                 if (str.equals("char")) { break; }
             case "float" :
                 System.out.println("float max value: " + Float.MAX_VALUE);
